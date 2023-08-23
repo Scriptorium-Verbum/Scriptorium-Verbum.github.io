@@ -1,0 +1,11 @@
+version: '3.5'
+services:
+  scriptorium_page:
+    container_name: scriptorium_page
+    image: scriptorium_page
+    build:
+      context: .
+    volumes:
+      - .:/workspace:cached
+    command: sleep infinity
+    restart: unless-stopped
